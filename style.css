@@ -1,0 +1,268 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color:#eff7fa;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button ,a ,li {
+    cursor: pointer;
+}
+
+.myBtn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.myBtn:hover {
+    background-color: var(--yellow-color);
+    color: var(--red-color);
+}
+
+/* Start Navbar */
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search i {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+/* Fix for Mobile Button */
+.navbar-nav .btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+/* End Navbar */
+
+/* Start Landing */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 2.5rem;
+}
+
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+/* End Landing */
+
+/* start features */
+
+.first-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icons-holder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icons-holder .one {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.icons-holder .two {
+    font-size: 4rem;
+    color: var(--green-color);
+}
+.features .feat h4 {
+    color: var(--yellow-color);
+    font-weight: 600;
+}
+/* end features */
+
+/* start our works */
+.our-works{
+    background-color: var(--section-color);
+}
+.menu  li{
+    list-style: none;
+    /* padding: 0 0.5rem; */
+}
+.menu li a {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+.menu li a:hover{
+    color: var(--red-color);
+}
+.menu .active {
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+    
+}
+.work-card {
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+.work-card::before {
+    content: attr(data-work);
+    position: absolute;
+    
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: rgba(51, 209, 204, 0.76); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+    pointer-events: none;
+}
+.work-card:hover::before {
+    transform: translateX(0); 
+}
+
+.work-card img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space below the image */
+}
+/* end our works */
+
+/* start about us */
+.description {
+    width: 50%;
+    margin: 0 auto;
+}
+.description p {
+    font-weight: 600;
+}
+.test {
+    padding: 0.5rem 1rem;
+}
+.test p{
+    font-weight: 600;
+}
+.laptop img{
+    max-width: 100%;
+    height: auto;
+}
+/* end about us */
+
+/* start our team */
+.our-team {
+    background-color: var(--section-color);
+}
+.our-team .title{
+    color: var(--yellow-color);
+    font-weight: 600;
+}
+.our-team .title p {
+    font-weight: 600;
+}
+.our-team .team-card {
+    max-width: 100%;
+    height: auto;
+} 
+  
+.our-team .team-card .name {
+    background-color: var(--green-color);
+
+}
+.our-team .team-card .qoute {
+    font-weight: 600;
+}
+
+/* end our team */
+
+/* start project */
+.project {
+    background-color: var(--dark-color);
+}
+/* end project */
+
+/* start contact */
+
+.contact {
+    background-color: var(--yellow-color);
+}
+.contact input {
+    border: none;
+    border-bottom: 1px solid white;
+    /* margin-top: 15px; */
+    width:500px;
+}
+.contact input:focus {
+    border: none;
+}
+.contact input::placeholder {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.contact a {
+    background-color: var(--dark-color);
+}
+
+/* end contact */
+
+/* start footer */
+.footer {
+    background-color: var(--dark-color);
+    font-weight: 600;
+}
+.footer .developer {
+    color: var(--green-color);
+}
+.footer .company {
+    color: var(--yellow-color);
+}
+.footer button {
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+}
+
+/* end footer */
